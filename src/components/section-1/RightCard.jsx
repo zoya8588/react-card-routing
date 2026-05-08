@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import RightCardContent from './RightCardContent'
 
 const RightCard = (props) => {
@@ -25,17 +26,20 @@ const RightCard = (props) => {
         </div>
 
         <div className='flex justify-between'>
-          <button className='bg-blue-600 text-white font-medium px-7 py-3 rounded-full text-lg flex items-center gap-2'>
+          <Link
+            to={`/${props.tag.toLowerCase()}`}
+            className='bg-blue-600 text-white font-medium px-7 py-3 rounded-full text-lg flex items-center gap-2'
+          >
             {props.tag}
             <i className="ri-arrow-right-line"></i>
-          </button>
+          </Link>
         </div>
 
       </div>
-      <RightCardContent id={props.id}tag={props.tag} intro={props.intro}/>
+      <RightCardContent id={props.id} tag={props.tag} intro={props.intro}/>
 
     </div>
   )
 }
 
-export default RightCard 
+export default RightCard
