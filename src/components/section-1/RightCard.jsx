@@ -25,16 +25,6 @@ const RightCard = (props) => {
           </p>
         </div>
 
-        <div className='flex justify-between'>
-          <Link
-            to={`/${props.tag.toLowerCase()}`}
-            className='bg-blue-600 text-white font-medium px-7 py-3 rounded-full text-lg flex items-center gap-2'
-          >
-            {props.tag}
-            <i className="ri-arrow-right-line"></i>
-          </Link>
-        </div>
-
       </div>
       <RightCardContent id={props.id} tag={props.tag} intro={props.intro}/>
 
